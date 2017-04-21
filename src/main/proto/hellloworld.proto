@@ -1,0 +1,16 @@
+syntax="proto3";
+
+option optimize_for=LITE_RUNTIME;
+option java_multiple_files=true;
+option java_outer_classname="HelloWorld";
+option objc_class_prefix="SP";
+
+message HelloRequest{
+    string greeting=1;
+}
+message HelloResponse{
+    string reply=1;
+}
+service HelloWorldService{
+    rpc sayHello(HelloRequest)returns(HelloResponse);
+}
